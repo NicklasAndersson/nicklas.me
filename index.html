@@ -26,6 +26,15 @@
 
         header {
             margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
         }
 
         h1 {
@@ -194,6 +203,7 @@
 
             html += `
                 <header>
+                    <img class="profile-photo" src="profile.jpg" alt="${data.person.name}" width="200" height="200">
                     <h1>${data.person.name}</h1>
                     <div class="contact-info">
                         <a href="mailto:${data.person.contact.email}">${data.person.contact.email}</a> | ${data.person.contact.location}
