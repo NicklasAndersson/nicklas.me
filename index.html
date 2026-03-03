@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicklas Andersson</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #333;
+            background-color: #fff;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
+
+        .contact-info {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .summary {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .employer-block {
+            margin-bottom: 30px;
+        }
+
+        .employer-header {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .employer-period {
+            font-weight: normal;
+            color: #666;
+        }
+
+        .assignment {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+
+        .assignment-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .technologies {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .education-item {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #eaeaea;
+            color: #999;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        const resumeData = {
+            "person": {
+                "name": "Nicklas Andersson",
+                "contact": {
+                    "email": "andersson@nicklas.me",
+                    "location": "Stockholm SE",
+                    "website": "https://nicklas.me"
+                },
+                "summary": "Systemutvecklare med mycket erfarenhet av Java och en del Javascript"
+            },
+            "experience": [
+                {
+                    "company": "Visionite",
+                    "period": "September 2024 –",
+                    "assignments": [
+                        {
+                            "client": "Svenska kraftnät",
+                            "role": "Lösningsarkitekt",
+                            "technologies": ["Kotlin", "OpenShift", "Kafka"]
+                        }
+                    ]
+                },
+                {
+                    "company": "Consid",
+                    "period": "April 2022 – 2024",
+                    "assignments": [
+                        {
+                            "client": "Skatteverket",
+                            "role": "Fullstack",
+                            "technologies": ["Java (Spring Boot)", "TypeScript (Angular)", "OpenShift"]
+                        },
+                        {
+                            "client": "Skatteverket / Valmyndigheten",
+                            "role": "Fullstack",
+                            "technologies": ["Java (Spring Boot)", "TypeScript (Angular)", "Oracle DB", "OpenShift"]
+                        }
+                    ]
+                },
+                {
+                    "company": "LeanOn",
+                    "period": "Aug 2016 – Mar 2022",
+                    "assignments": [
+                        {
+                            "project": "Xplir",
+                            "role": "Fullstack, techlead",
+                            "technologies": ["Javascript (React / NodeJs)", "Postgres", "Microservices", "XML", "Docker"]
+                        },
+                        {
+                            "client": "Fortum",
+                            "role": "Backend",
+                            "technologies": ["Java, Kotlin (Spring Boot)", "Apache Kafka", "MySQL", "ElasticSearch", "Microservices", "Docker"]
+                        },
+                        {
+                            "project": "Indicap",
+                            "role": "Backend och Mobilapp",
+                            "technologies": ["Android", "iOS", "Java (JSP)", "Swift"]
+                        },
+                        {
+                            "project": "Erik Penser mfl. (LISA) / LeanOn AB",
+                            "role": "Backend",
+                            "technologies": ["Java (Spring Boot)", "Postgres", "OracleDB", "MSSQL", "Microservices", "Docker"]
+                        },
+                        {
+                            "client": "Nasdaq",
+                            "role": "Backend",
+                            "technologies": ["Java (Spring)", "Soap", "IBM MQ", "Windows"]
+                        }
+                    ]
+                }
+            ],
+            "education": [
+                {
+                    "institution": "Stockholms Universitet",
+                    "program": "Data och Systemvetenskap",
+                    "period": "2013-2016"
+                },
+                {
+                    "institution": "KTH",
+                    "program": "Elektronik och Data",
+                    "period": "2011-2012"
+                }
+            ],
+            "metadata": {
+                "theme": "Theme: Resumee by Asphalt Themes"
+            }
+        };
+
+        function renderResume(data) {
+            const app = document.getElementById('app');
+            let html = '';
+
+            html += `
+                <header>
+                    <h1>${data.person.name}</h1>
+                    <div class="contact-info">
+                        <a href="mailto:${data.person.contact.email}">${data.person.contact.email}</a> | ${data.person.contact.location}
+                    </div>
+                    <div class="summary">${data.person.summary}</div>
+                </header>
+            `;
+
+            html += `<h2>Arbetslivserfarenhet</h2>`;
+            data.experience.forEach(exp => {
+                html += `
+                    <div class="employer-block">
+                        <div class="employer-header">
+                            ${exp.company} <span class="employer-period">| ${exp.period}</span>
+                        </div>
+                `;
+
+                exp.assignments.forEach(assignment => {
+                    const title = assignment.client || assignment.project;
+                    html += `
+                        <div class="assignment">
+                            <div class="assignment-title">${title} – ${assignment.role}</div>
+                            <div class="technologies">${assignment.technologies.join(' – ')}</div>
+                        </div>
+                    `;
+                });
+
+                html += `</div>`;
+            });
+
+            html += `<h2>Utbildning</h2>`;
+            data.education.forEach(edu => {
+                html += `
+                    <div class="education-item">
+                        &gt; ${edu.institution}, ${edu.program} (${edu.period})
+                    </div>
+                `;
+            });
+
+            html += `
+                <footer>
+                    ${data.metadata.theme}
+                </footer>
+            `;
+
+            app.innerHTML = html;
+        }
+
+        renderResume(resumeData);
+    </script>
+</body>
+</html>
