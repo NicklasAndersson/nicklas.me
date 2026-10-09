@@ -1,0 +1,7 @@
+.git
+.gitignore
+.wrangler
+wrangler.jsonc
+README.md
+AGENTS.md
+.assetsignore

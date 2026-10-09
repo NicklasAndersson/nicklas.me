@@ -5,6 +5,10 @@
   "observability": {
     "enabled": true
   },
+  "routes": [
+    { "pattern": "nicklas.me", "custom_domain": true },
+    { "pattern": "www.nicklas.me", "custom_domain": true }
+  ],
   "assets": {
     "directory": "./"
   },
