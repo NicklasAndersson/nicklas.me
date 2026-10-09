@@ -5,12 +5,13 @@
   "observability": {
     "enabled": true
   },
+  "build": { "command": "node build.mjs" },
   "routes": [
     { "pattern": "nicklas.me", "custom_domain": true },
     { "pattern": "www.nicklas.me", "custom_domain": true }
   ],
   "assets": {
-    "directory": "./"
+    "directory": "./dist"
   },
   "compatibility_flags": [
     "nodejs_compat"

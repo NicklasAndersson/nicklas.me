@@ -1,0 +1,127 @@
+{
+  "person": {
+    "name": "Nicklas Andersson",
+    "contact": {
+      "email": "andersson@nicklas.me",
+      "location": "Stockholm SE",
+      "website": "https://nicklas.me"
+    },
+    "summary": "Systemutvecklare med mycket erfarenhet av Java och en del Javascript"
+  },
+  "experience": [
+    {
+      "company": "Visionite",
+      "period": "September 2024 –",
+      "assignments": [
+        {
+          "client": "Svenska kraftnät",
+          "role": "Lösningsarkitekt",
+          "technologies": [
+            "Kotlin",
+            "Python",
+            "OpenShift",
+            "Kafka"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Consid",
+      "period": "April 2022 – 2024",
+      "assignments": [
+        {
+          "client": "Skatteverket",
+          "role": "Fullstack",
+          "technologies": [
+            "Java (Spring Boot)",
+            "TypeScript (Angular)",
+            "OpenShift"
+          ]
+        },
+        {
+          "client": "Skatteverket / Valmyndigheten",
+          "role": "Fullstack",
+          "technologies": [
+            "Java (Spring Boot)",
+            "TypeScript (Angular)",
+            "Oracle DB",
+            "OpenShift"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "LeanOn",
+      "period": "Aug 2016 – Mar 2022",
+      "assignments": [
+        {
+          "project": "Xplir",
+          "role": "Fullstack, techlead",
+          "technologies": [
+            "Javascript (React / NodeJs)",
+            "Postgres",
+            "Microservices",
+            "XML",
+            "Docker"
+          ]
+        },
+        {
+          "client": "Fortum",
+          "role": "Backend",
+          "technologies": [
+            "Java, Kotlin (Spring Boot)",
+            "Apache Kafka",
+            "MySQL",
+            "ElasticSearch",
+            "Microservices",
+            "Docker"
+          ]
+        },
+        {
+          "project": "Indicap",
+          "role": "Backend och Mobilapp",
+          "technologies": [
+            "Android",
+            "iOS",
+            "Java (JSP)",
+            "Swift"
+          ]
+        },
+        {
+          "project": "Erik Penser mfl. (LISA) / LeanOn AB",
+          "role": "Backend",
+          "technologies": [
+            "Java (Spring Boot)",
+            "Postgres",
+            "OracleDB",
+            "MSSQL",
+            "Microservices",
+            "Docker"
+          ]
+        },
+        {
+          "client": "Nasdaq",
+          "role": "Backend",
+          "technologies": [
+            "Java (Spring)",
+            "Soap",
+            "IBM MQ",
+            "Windows"
+          ]
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Stockholms Universitet",
+      "program": "Data och Systemvetenskap",
+      "period": "2013-2016"
+    },
+    {
+      "institution": "KTH",
+      "program": "Elektronik och Data",
+      "period": "2011-2012"
+    }
+  ]
+}
